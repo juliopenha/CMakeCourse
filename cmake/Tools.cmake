@@ -78,8 +78,7 @@ endfunction()
 # iwyu, clang-tidy and cppcheck
 function(add_linter_tool_to_target target)
     if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
-        message(
-            "==> Cppcheck, IWYU and Clang-Tidy Targets do not work with MSVC")
+        message("==> Cppcheck, IWYU and Clang-Tidy Targets do not work with MSVC")
         return()
     endif()
     get_target_property(TARGET_SOURCES ${target} SOURCES)
